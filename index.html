@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Ines Perado">
+      <meta name="description" content="HTML,CSS,Bootstrap,Django,Python">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="shorcut icon" href="assets/img/bar-restaurant-svgrepo-com.svg" type="image/icon-x">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <title>Inicio</title>
+  </head>
+  <header>    
+    <nav class="navbar navbar-expand-lg navbar-light nvb">
+        <div class="container-fluid">
+          <div class="col-10 col-lg-9"> 
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/restaurant-store-svgrepo-com.svg" id="logo-nvb" style="height: 40px;">
+            <span class="logo mt-2"> Deli Food </span>
+          </a>
+          </div>   
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active nvb-item" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active nvb-item" href="#">Añadir plato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active nvb-item" href="#">Mostrar platos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+  <body>
+    <div class="container d-flex pt-4">
+        <div class="container col-lg-6 col-12 text-white">
+            <h2> Ven y conoce Deli Food, un restaurante enfocado en calidad, servicio y sabor</h2>
+            <p> Deléitate con los sabores que nuestro restaurante ofrece. Contamos con una gran variedad de platos y postres. <br>
+            Tenemos dos sucursales en Santiago en las que nos puedes visitar. Anímate y vive experiencia Deli Food.</p>
+        </div>
+        <div id="carouselExampleControl" class="col-12 col-lg-6 carousel slide carousel-fade" data-bs-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" style="height: 400px; object-fit: cover;" src="assets/img/espaguetis-salsa.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" style="height: 400px; object-fit: cover;" src="assets/img/arroz-cpollo-arvejado-foto-principal.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" style="height: 400px; object-fit: cover;" src="assets/img/Lentejas.png" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControl" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControl" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

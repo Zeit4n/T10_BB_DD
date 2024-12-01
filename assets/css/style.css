@@ -1,0 +1,20 @@
+body {
+    background-image: url('../img/fondo.png');
+    background-size: cover;
+}
+.nvb {
+    background-color: burlywood;
+}
+.logo {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    font-style: normal;
+}
+.nvb-item:hover{
+    color: white !important;
+}
+
+.transparente{
+    background-color: rgba(255,255,255,0.5);    
+}

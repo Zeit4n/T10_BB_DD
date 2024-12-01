@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Ines Perado">
+      <meta name="description" content="HTML,CSS,Bootstrap,Django,Python">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="shorcut icon" href="assets/img/bar-restaurant-svgrepo-com.svg" type="image/icon-x">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <title>Registrar plato</title>
+  </head>
+  <header>    
+    <nav class="navbar navbar-expand-lg navbar-light nvb">
+        <div class="container-fluid">
+          <div class="col-10 col-lg-9"> 
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/restaurant-store-svgrepo-com.svg" id="logo-nvb" style="height: 40px;">
+            <span class="logo mt-2"> Deli Food </span>
+          </a>
+          </div>   
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active nvb-item" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active nvb-item" href="#">Añadir plato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active nvb-item" href="#">Mostrar platos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+  <body>
+    <div class="container card card-transparente border-dark col-md-3 my-4 bg-dark text-white ">
+        <div class="card-body">
+            <h3 class="card-title text-center">Registro de plato</h3>
+            <form class="text-center" method="post">
+                <div class="mb-3">
+                <label for="name">Nombre:</label><br>
+                <input type="text" name="name" id="name"><br> 
+                </div>
+
+                <div class="mb-3">
+                <label for="category">Categoría:</label><br>
+                <input type="text" name="category" id="category"> <br>
+                </div>
+
+                <div class="mb-3">
+                <label for="price">Precio:</label><br>
+                <input type="number" name="price" id="price"> <br>
+                </div>
+
+                <div class="mb-3">
+                <label for="price">Descripcion:</label><br>
+                <textarea name="price" rows="5" cols="24" id="price" placeholder="Descripcion..."> </textarea><br>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
