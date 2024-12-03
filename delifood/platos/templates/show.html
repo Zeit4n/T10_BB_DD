@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Lista de platos{% endblock %}
+
+<div class="container my-2 p-2 bg-dark text-white text-center">
+    <h1>Listado platos</h1>
+</div>
+
+{% block main_content %}
+{% if platos %}
+<div class="container my-2">
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Categoria</td>
+                    <td>Precio</td>
+                    <td>Descripción</td>
+                    <td>Acción</td>
+                </tr>
+            </thead>
+            <tbody class="table-dark text-white">
+                {% for p in platos %}
+                <tr>
+                    <td>{{p.nombre}}</td>
+                    <td>{{p.id_categoria.categoria}}</td>
+                    <td>{{p.precio}}</td>
+                    <td>{{p.descripcion}}</td>
+                    <td>
+                        <a class="btn btn-outline-warning" href="{% url 'update' p.id_plato %}">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a class="btn btn-outline-danger modal-borrar" data-bs-toggle="modal" data-bs-target="#modalDelete" data-href="{% url 'delete' p.id_plato %}">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDelete" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalDeleteLabel">Confirmación</h1>
+            </div>
+            <div class="modal-body">
+                <p class="">¿Estás seguro que deseas eliminar el plato seleccionado?<br>Este proceso no se puede deshacer.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <a href="#" id="confirmar-eliminacion" class="btn btn-danger">Sí</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container my-2 bg-danger text-white p-2">
+    <h2>No hay platos disponibles.</h2>
+</div>
+{% endif %}
+{% endblock %}
+{% block extra_js %}
+<script>
+    $('.modal-borrar').on('click', function() {
+        console.log("Hola soy js");
+        const href = $(this).attr('data-href');
+        $('#confirmar-eliminacion').attr('href',href);
+    });
+</script>
+{% endblock %}
+

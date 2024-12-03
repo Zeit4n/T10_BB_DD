@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Actualizar plato{% endblock %}
+
+{% block main_content %}
+    <div class="container card card-transparente border-dark col-md-3 my-4 bg-dark text-white ">
+        <div class="card-body">
+            <h3 class="card-title text-center">Actualizar plato</h3>
+            <form class="text-center" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                <label for="name">Nuevo nombre:</label><br>
+                <input type="text" name="name" id="name" value="{{old_plato.nombre}}"><br> 
+                </div>
+
+                <div class="mb-3">
+                <label for="category">Nueva categoría:</label><br>
+                <select name="category" id="category">
+                    <option value="1">Carnes rojas</option>
+                    <option value="2">Carnes blancas</option>
+                    <option value="3">Pastas</option>
+                    <option value="4">Legumbres</option>
+                </select>
+                </div>
+
+                <div class="mb-3">
+                <label for="price">Nuevo precio:</label><br>
+                <input type="number" name="price" id="price" value="{{old_plato.precio}}"><br>
+                </div>
+
+                <div class="mb-3">
+                <label for="description">Nueva descripción:</label><br>
+                <textarea name="description" rows="5" cols="24" id="description" placeholder="Descripcion..."> </textarea><br>
+                </div>
+                <button type="submit">Actualizar plato</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
